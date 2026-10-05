@@ -41,6 +41,6 @@ void loop() {
     // TODO 2.4 (continuación): Mientras la ventana de arranque no expire, mantén el logo
     // en pantalla; al expirar, cambia de estado y repórtalo por el monitor.
 
-    // TODO 4.3 (continuación): Con el arranque terminado, atiende la consola en cada
+    // TODO 4.3 (continuación):Con el arranque terminado, atiende la consola en cada
     // vuelta y deja que la animación avance un paso sin bloquear el bucle.
 }
