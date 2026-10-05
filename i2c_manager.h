@@ -23,10 +23,6 @@ inline void scanI2C() {
     }
      Serial.printf("[I2C] escaneo completo, %d dispositivos\n", count);
 }
-
-// TODO 1.3: Sondea la dirección del panel e informa si responde o si el arranque debe detenerse.
-// Pregunta Guía: ¿Qué debe imprimir el arranque cuando el panel no responde?
-// Pista: Hay dos caminos, uno de éxito y uno fatal; la guía §05 los muestra.
 inline void testI2CDevice() {
     Wire.beginTransmission(OLED_I2C_ADDR);
     if (Wire.endTransmission() == 0) {
