@@ -1,4 +1,3 @@
-// main.ino
 // ============================================
 // RESPONSABILIDAD: Orquestar arranque y bucle principal del sistema.
 // No sabe como hacer nada: solo llama a cada modulo en el orden correcto.
