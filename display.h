@@ -20,7 +20,15 @@ Adafruit_SSD1306 display(OLED_WIDTH, OLED_HEIGHT, &Wire, OLED_RESET_PIN);
 // Pregunta Guía: ¿Qué dos argumentos necesita el panel para inicializarse y qué haces si falla?
 // Pista: La línea de éxito esperada está en la guía §05.
 inline void initDisplay() {
-    /* ESCRIBE TU CÓDIGO AQUÍ */
+    if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_I2C_ADDRESS)) {
+        Serial.println(F("[OLED] FATAL: no se pudo inicializar el panel"));
+        while (true) {
+            delay(1000);
+        }
+    }
+    display.clearDisplay();
+    display.display();
+    Serial.printf("[OLED] panel listo %dx%d a %d kHz\n", OLED_WIDTH, OLED_HEIGHT, I2C_FREQUENCY_HZ / 1000);
 }
 
 // Ejemplo de uso de la API del panel: imprime una linea de texto y la presenta.
